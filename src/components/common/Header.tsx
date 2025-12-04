@@ -173,54 +173,20 @@ export default function Header() {
               </Link>
 
               {/* Desktop Navigation */}
-              <nav className="hidden lg:flex items-center">
+              <nav className="hidden lg:flex items-center gap-1">
                 {navItems.map((item) => (
-                  <div
+                  <Link
                     key={item.id}
-                    className="relative group"
-                    onMouseEnter={() => setActiveDropdown(item.id)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <Link
-                      href={item.href}
-                      className={cn(
-                        'flex items-center gap-1 px-5 py-7 text-[15px] font-medium transition-colors',
-                        pathname.startsWith(item.href)
-                          ? 'text-primary-500'
-                          : 'text-secondary-800 hover:text-primary-500'
-                      )}
-                    >
-                      {item.label}
-                      {item.children && (
-                        <ChevronDown size={14} className={cn(
-                          'transition-transform',
-                          activeDropdown === item.id && 'rotate-180'
-                        )} />
-                      )}
-                    </Link>
-
-                    {/* Dropdown */}
-                    {item.children && (
-                      <div
-                        className={cn(
-                          'absolute top-full left-0 bg-white shadow-xl min-w-[180px] py-2 transition-all duration-200',
-                          activeDropdown === item.id
-                            ? 'opacity-100 visible translate-y-0'
-                            : 'opacity-0 invisible -translate-y-2'
-                        )}
-                      >
-                        {item.children.map((child, idx) => (
-                          <Link
-                            key={idx}
-                            href={child.href}
-                            className="block px-5 py-2.5 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-500 transition-colors"
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
+                    href={item.href}
+                    className={cn(
+                      'px-4 py-2 text-sm font-medium transition-colors',
+                      pathname.startsWith(item.href)
+                        ? 'text-primary-500'
+                        : 'text-secondary-800 hover:text-primary-500'
                     )}
-                  </div>
+                  >
+                    {item.label}
+                  </Link>
                 ))}
               </nav>
 
@@ -248,31 +214,6 @@ export default function Header() {
               >
                 {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
               </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll Fixed Nav Bar */}
-        <div className={cn(
-          'bg-primary-500 hidden lg:block transition-all duration-300',
-          isScrolled ? 'py-0' : 'py-1'
-        )}>
-          <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center gap-1">
-              {navItems.map((item) => (
-                <Link
-                  key={item.id}
-                  href={item.href}
-                  className={cn(
-                    'px-6 py-2.5 text-sm font-medium transition-colors rounded',
-                    pathname.startsWith(item.href)
-                      ? 'bg-white/20 text-white'
-                      : 'text-white/90 hover:bg-white/10'
-                  )}
-                >
-                  {item.label}
-                </Link>
-              ))}
             </div>
           </div>
         </div>

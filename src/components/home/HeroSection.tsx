@@ -64,7 +64,7 @@ export default function HeroSection() {
   }, [isPlaying, nextSlide]);
 
   return (
-    <section className="relative h-[calc(100vh-140px)] min-h-[500px] max-h-[800px] overflow-hidden">
+    <section className="relative h-[calc(100vh-120px)] min-h-[550px] max-h-[900px] overflow-hidden">
       {/* Slides */}
       <AnimatePresence mode="wait">
         <motion.div
