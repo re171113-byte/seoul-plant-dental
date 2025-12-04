@@ -57,7 +57,7 @@ export default async function LocaleLayout({
       <body className="min-h-screen flex flex-col">
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <main className="flex-grow pt-[80px] lg:pt-[120px]">{children}</main>
+          <main className="flex-grow pt-[96px] lg:pt-[168px]">{children}</main>
           <Footer />
           <FloatingCTA />
         </NextIntlClientProvider>
