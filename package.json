@@ -1,0 +1,45 @@
+{
+  "name": "seoul-plant-dental",
+  "version": "1.0.0",
+  "description": "서울플란트치과 공식 웹사이트 - SEOUL PLANT Dental Official Website",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [
+    "dental",
+    "implant",
+    "치과",
+    "임플란트",
+    "서울플란트"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "clsx": "^2.1.1",
+    "firebase": "^12.6.0",
+    "framer-motion": "^12.23.25",
+    "lucide-react": "^0.555.0",
+    "next": "^14.2.33",
+    "next-intl": "^4.5.8",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.68.0",
+    "typescript": "^5.9.3",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.22",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.7",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.1"
+  }
+}

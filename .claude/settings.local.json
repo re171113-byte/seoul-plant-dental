@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:insidea.com)",
+      "WebFetch(domain:www.lucidcrew.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
